@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Atendimentos</title>
+
+    <!-- CONEXÃO COM O CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Registro de Atendimentos</h1>
+
+    <!-- FORMULÁRIO -->
+    <form class="formulario" onsubmit="salvarAtendimento(); return false;">
+
+        <input type="text" id="cliente" placeholder="Nome do cliente" required>
+
+        <input type="text" id="contrato" placeholder="Contrato (000/000)" required>
+
+        <input type="date" id="data" required>
+
+        <input type="time" id="horario" required>
+
+        <select id="tipo">
+            <option>Venda</option>
+            <option>Suporte</option>
+            <option>Retido</option>
+            <option>Cancelado</option>
+        </select>
+
+        <select id="status">
+            <option>Retido</option>
+            <option>Cancelado</option>
+            <option>Venda Controle</option>
+            <option>Venda Pós Pago</option>
+        </select>
+
+        <input type="text" id="obs" placeholder="Observação rápida">
+
+        <button type="submit">Salvar Atendimento</button>
+
+    </form>
+
+    <!-- BLOCO DE NOTAS -->
+    <h2>Bloco de Anotações</h2>
+    <div id="blocoNotas" class="bloco-notas"></div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        Desenvolvido por Nathan Rocha |
+        📞 <a href="tel:+5582993717863">(82) 99371-7863</a> |
+        📧 <a href="mailto:nathanxpon18y@gmail.com">nathanxpon18y@gmail.com</a>
+    </footer>
+
+    <!-- CONEXÃO COM O JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
