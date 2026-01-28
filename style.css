@@ -1,22 +1,12 @@
-/* ==========================
-   Estilo geral da página
-====body {
+body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     margin: 20px;
     color: #333;
 }
 
-/* ==========================
-   Títulos
-========================== */
-h1, h2 {
-    color: #1976d2;
-}
+h1, h2 { color: #1976d2; }
 
-/* ==========================
-   Formulário de Atendimento
-========================== */
 .formulario {
     background-color: #fff;
     padding: 20px;
@@ -37,7 +27,6 @@ h1, h2 {
     border: 1px solid #ccc;
     font-size: 14px;
 }
-
 .formulario button {
     background-color: #1976d2;
     color: white;
@@ -50,77 +39,63 @@ h1, h2 {
     background-color: #0d47a1;
 }
 
-/* ==========================
-   Bloco de Notas
-========================== */
+.estatisticas {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.estatisticas p { margin: 5px 0; font-weight: bold; }
+
 .bloco-notas {
     border: 1px solid #ccc;
     padding: 10px;
     min-height: 200px;
     background-color: #f0f0f0;
-    overflow-y: auto; /* scroll se houver muitas notas */
+    overflow-y: auto;
     border-radius: 6px;
 }
 
-/* Cada registro individual */
 .registro-bloco {
     background: #f9f9f9;
     padding: 10px;
     margin-bottom: 10px;
-    border-left: 4px solid #1976d2; /* cor padrão azul */
+    border-left: 4px solid #1976d2;
     border-radius: 4px;
     font-family: monospace;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    align-items: center;
 }
 
-/* Campos dentro do registro */
-.registro-bloco span {
-    min-width: 120px; /* largura mínima para alinhar colunas */
-}
+.registro-bloco span { min-width: 120px; }
+.registro-bloco hr { width: 100%; border: 0; border-top: 1px solid #ccc; margin: 10px 0 0 0; }
 
-/* Linha separadora no final de cada registro */
-.registro-bloco hr {
-    width: 100%;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 10px 0 0 0;
-}
-
-/* ==========================
-   Rodapé
-========================== */
 footer {
     margin-top: 40px;
     font-size: 14px;
     color: #555;
 }
 
-footer a {
-    color: #1976d2;
-    text-decoration: none;
-}
+footer a { color: #1976d2; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
 
-footer a:hover {
-    text-decoration: underline;
-}
+/* Cores por tipo */
+.tipo-retido { border-left-color: #4CAF50; }
+.tipo-cancelado { border-left-color: #F44336; }
+.tipo-suporte { border-left-color: #FFEB3B; }
+.tipo-venda { border-left-color: #1976d2; }
 
-/* ==========================
-   Cores por Tipo/Status
-========================== */
-.tipo-retido {
-    border-left-color: #4CAF50; /* verde */
+.botao-acao { margin-left: auto; display: flex; gap: 5px; }
+.botao-acao button {
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
-
-.tipo-cancelado {
-    border-left-color: #F44336; /* vermelho */
-}
-
-.tipo-suporte {
-    border-left-color: #FFEB3B; /* amarelo */
-}
-
-.tipo-venda {
-    border-left-color: #1976d2; /* azul */
-}
+.botao-acao .editar { background-color: #FFC107; color: #000; }
+.botao-acao .apagar { background-color: #F44336; color: #fff; }
