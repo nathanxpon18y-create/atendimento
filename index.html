@@ -7,56 +7,67 @@
 </head>
 <body>
 
-    <h1>Registro de Atendimentos</h1>
+    <div class="container">
 
-    <!-- FORMULÁRIO -->
-    <form class="formulario" onsubmit="salvarAtendimento(); return false;">
-        <input type="text" id="cliente" placeholder="Nome do cliente" required>
-        <input type="text" id="contrato" placeholder="Contrato (000/000)" required>
-        <input type="hidden" id="data">
-<input type="hidden" id="horario">
+        <h1>Registro de Atendimentos</h1>
 
-        <select id="tipo">
-            <option>Venda</option>
-            <option>Suporte</option>
-            <option>Retido</option>
-            <option>Cancelado</option>
-            <option>Transferida</option>
-        </select>
-        <select id="status">
-            <option>Total</option>
-            <option>Parcial</option>
-            <option>Cancelamento MDE</option>
-            <option>Agendamento de VT</option>
-            <option>Venda Controle</option>
-            <option>Venda Pós Pago</option>
-            <option>Transferida Supervisão</option>
-            <option>Transferida Muda</option>
-            <option>Tansferida Purple </option>
-        </select>
-        <input type="text" id="obs" placeholder="Observação rápida">
-        <button type="submit">Salvar Atendimento</button>
-    </form>
+        <!-- FORMULÁRIO -->
+        <form class="formulario" onsubmit="salvarAtendimento(); return false;">
+            <input type="text" id="cliente" placeholder="Nome do cliente" required>
+            <input type="text" id="contrato" placeholder="Contrato (000/000)" required>
 
-    <!-- ESTATÍSTICAS -->
-    <h2>Estatísticas</h2>
-    <div id="estatisticas" class="estatisticas">
-        <p>Total de Atendimentos: <span id="totalAtendimentos">0</span></p>
-        <p>Total de Cancelamentos: <span id="totalCancelamentos">0</span></p>
-        <p>Taxa de Cancelamento: <span id="taxaCancelamento">0%</span></p>
+            <select id="tipo">
+                <option>Venda</option>
+                <option>Suporte</option>
+                <option>Retido</option>
+                <option>Cancelado</option>
+                <option>Transferida</option>
+                <option>Informações</option>
+            </select>
+
+            <select id="status">
+                <option>Informações do contrato</option>
+                <option>Total</option>
+                <option>Parcial</option>
+                <option>Suspensão temporária </option>
+                <option>Cancelamento MDE</option>
+                <option>Agendamento de VT</option>
+                <option>Venda Controle/ Pós Pago</option>
+                <option>Transferida Supervisão</option>
+                <option>Transferida Muda</option>
+                
+            </select>
+
+            <input type="text" id="obs" placeholder="Observação rápida">
+            <button type="submit">Salvar Atendimento</button>
+        </form>
+
+        <!-- ESTATÍSTICAS -->
+        <h2>Estatísticas</h2>
+        <div id="estatisticas" class="estatisticas">
+            <p>Total de Atendimentos: <span id="totalAtendimentos">0</span></p>
+            <p>Total de Cancelamentos: <span id="totalCancelamentos">0</span></p>
+            <p>Taxa de Cancelamento: <span id="taxaCancelamento">0%</span></p>
+        </div>
+
+        <!-- BLOCO DE NOTAS -->
+        <h2>Bloco de Anotações</h2>
+        <div id="blocoNotas" class="bloco-notas"></div>
+
+        <!-- RODAPÉ -->
+        <footer>
+            Desenvolvido por Nathan Rocha |
+            📞 <a href="tel:+5582993717863">(82) 99371-7863</a> |
+            📧 <a href="mailto:nathanxpon18y@gmail.com">nathanxpon18y@gmail.com</a>
+        </footer>
+
     </div>
-
-    <!-- BLOCO DE NOTAS -->
-    <h2>Bloco de Anotações</h2>
-    <div id="blocoNotas" class="bloco-notas"></div>
-
-    <!-- RODAPÉ -->
-    <footer>
-        Desenvolvido por Nathan Rocha |
-        📞 <a href="tel:+5582993717863">(82) 99371-7863</a> |
-        📧 <a href="mailto:nathanxpon18y@gmail.com">nathanxpon18y@gmail.com</a>
-    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
